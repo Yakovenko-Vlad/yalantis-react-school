@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { UserProvider } from './UserContext';
-import { Route, BrowserRouter, Navigate, Routes } from 'react-router-dom';
+import { Route, HashRouter, Navigate, Routes } from 'react-router-dom';
 
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
             <Route exact path="/" element={<Navigate to="/employees" />} />
             <Route
@@ -18,6 +18,6 @@ ReactDOM.render(
             />
             <Route exact path="*" element={<Navigate to="/employees" />} />
         </Routes>
-    </BrowserRouter>,
+    </HashRouter>,
     document.getElementById('root'),
 ); 
